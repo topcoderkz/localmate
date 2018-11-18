@@ -1,6 +1,6 @@
 # localmate
 
-Platform to connect volunteers with visitors coming to Korea to medical reasons
+Platform to connect volunteers with visitors coming to Korea for medical reasons
 
 ### How to run
 
