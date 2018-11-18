@@ -8,12 +8,6 @@ class User(AbstractUser):
     is_guest = models.BooleanField(default=False)
 
 
-class Mate(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-    skills = models.ManyToManyField(Skill, related_name='possessed_mates')
-
-
-
 class Skill(models.Model):
     name = models.CharField(max_length=200)
     proficiency = models.TextField()
@@ -21,3 +15,8 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Mate(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    skills = models.ManyToManyField(Skill)
